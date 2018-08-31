@@ -1,0 +1,16 @@
+S.No,OS,OTSI ,Live,version,Browser,Sleep for Auto logout,Remarks
+1,Windows,BMLGDEMO65,,54.0.2840.71 m (64-bit),Chrome,Working fine OTSI and Live instances,
+,,,,49.2,Mozilla,Not Working OTSI and Live instances,"First time cursor is bling for ""Replay"" but  second time it's not blinking"
+,,,,11,I.E,Working fine OTSI and Live instances,
+2,,BMLG65,,54.0.2840.71 m (64-bit),Chrome,Working fine OTSI and Live instances,
+,,,,49.2,Mozilla,Not Working OTSI and Live instances,"First time cursor is bling for ""Replay"" but  second time it's not blinking"
+,,,,11,I.E,Working fine OTSI and Live instances,
+3,Ubuntu,BMLGDEMO65,,47.0.2526.106 (64bit),Chrome,Working fine OTSI and Live instances,
+,,,,48,Mozilla,Working fine OTSI and Live instances,
+4,,BMLG65,,47.0.2526.106 (64bit),Chrome,Working fine OTSI and Live instances,
+,,,,48,Mozilla,Working fine OTSI and Live instances,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,

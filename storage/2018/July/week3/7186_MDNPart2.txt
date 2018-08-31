@@ -1,0 +1,5 @@
+Final-Recipient: rfc822; lkerman@theracanncorp.com
+Original-Message-ID: <6b7170594cb3eee07a48c7dac9b7fb6d@theracanncorp.com>
+Disposition: manual-action/MDN-sent-manually; displayed
+Original-Recipient: Dave Auger <dave@vintagecannabis.ca>
+Reporting-UA: Roundcube Webmail/1.3.6

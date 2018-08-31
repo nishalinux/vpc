@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_roomsmessages</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_roomsmessages` (
+  `roomsmessagesid` int(11) DEFAULT NULL,
+  `message` longtext,
+  `room_id` int(11) DEFAULT NULL,
+  `msg_type` varchar(255) DEFAULT NULL,
+  `path` varchar(255) DEFAULT NULL,
+  `filename` varchar(255) DEFAULT NULL,
+  `file_type` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_roomsmessagescf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_roomsmessagescf` (
+  `roomsmessagesid` int(11) NOT NULL,
+  PRIMARY KEY (`roomsmessagesid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_roomsmessages_status</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_roomsmessages_status` (
+  `room_id` int(11) NOT NULL,
+  `msgid` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `read` tinyint(3) DEFAULT '0',
+  PRIMARY KEY (`room_id`,`msgid`,`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1]]></sql>
+		</table>
+		<table>
+			<name>vtiger_roomsmessages_user_field</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_roomsmessages_user_field` (
+  `recordid` int(25) NOT NULL,
+  `userid` int(25) NOT NULL,
+  `starred` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+	</tables>
+</schema>

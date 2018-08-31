@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_processflow</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_processflow` (
+  `processflowid` int(11) NOT NULL DEFAULT '0',
+  `processflowname` varchar(255) DEFAULT NULL,
+  `processflow_no` varchar(100) DEFAULT NULL,
+  `process_flow_start_time` datetime DEFAULT NULL,
+  `process_flow_end_time` datetime DEFAULT NULL,
+  `processmasterid` varchar(255) DEFAULT NULL,
+  `pf_termination` varchar(255) DEFAULT NULL,
+  `learner_mode` varchar(3) DEFAULT '0',
+  `pf_termination_date` datetime DEFAULT NULL,
+  `pf_assignee` text,
+  `strain_name` varchar(255) NOT NULL,
+  `raw_materials` varchar(100) DEFAULT NULL,
+  `end_product_category` varchar(100) DEFAULT NULL,
+  `operating_mode` varchar(255) DEFAULT NULL,
+  `pf_description` text,
+  `pf_witness_one` varchar(100) DEFAULT NULL,
+  `pf_witness_one_signature` varchar(100) DEFAULT NULL,
+  `pf_witness_two` varchar(100) DEFAULT NULL,
+  `pf_witness_two_signature` varchar(100) DEFAULT NULL,
+  `pf_process_status` varchar(255) DEFAULT NULL,
+  `pf_project_id` varchar(100) DEFAULT NULL,
+  `pf_completion_notification` int(2) DEFAULT NULL,
+  PRIMARY KEY (`processflowid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_processflowcf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_processflowcf` (
+  `processflowid` int(11) NOT NULL,
+  `cf_2243` varchar(3) DEFAULT '0',
+  PRIMARY KEY (`processflowid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

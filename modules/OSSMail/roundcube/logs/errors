@@ -1,0 +1,4 @@
+[14-Jun-2018 07:53:04 +0200]: <4nd254dj> DB Error: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'roundcubemail' in C:\xampp\htdocs\simcoe\modules\OSSMail\roundcube\program\lib\Roundcube\rcube_db.php on line 175 (POST /simcoe/modules/OSSMail/roundcube/?_task=mail&_action=refresh)
+[14-Jun-2018 07:53:04 +0200]: <4nd254dj> PHP Error: config.inc.php was not found. (POST /simcoe/modules/OSSMail/roundcube/?_task=mail&_action=refresh)
+[04-Jul-2018 20:07:06 +0530]: <i32mo9hp> DB Error: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (GET /modules/OSSMail/roundcube/?_autologin=1&_autologinKey=fd1a249291bb3358fa1aa65454320270?_task=mail)
+[04-Jul-2018 20:07:17 +0530]: <85fhniql> DB Error: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (POST /modules/OSSMail/roundcube/?_task=mail&_action=refresh)

@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_roomsusers</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_roomsusers` (
+  `roomsusersid` int(11) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `room_id` int(11) DEFAULT NULL,
+  `room_status` varchar(255) DEFAULT NULL,
+  `archived` tinyint(3) DEFAULT '0',
+  `favorite` tinyint(3) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_roomsuserscf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_roomsuserscf` (
+  `roomsusersid` int(11) NOT NULL,
+  PRIMARY KEY (`roomsusersid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_roomsusers_user_field</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_roomsusers_user_field` (
+  `recordid` int(25) NOT NULL,
+  `userid` int(25) NOT NULL,
+  `starred` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+	</tables>
+</schema>

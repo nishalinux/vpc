@@ -1,0 +1,306 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_acmpr</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_acmpr` (
+  `acmprid` int(11) DEFAULT NULL,
+  `acmprname` varchar(255) DEFAULT NULL,
+  `acmpr_no` varchar(100) DEFAULT NULL,
+  `english` varchar(3) DEFAULT '0',
+  `french` varchar(3) DEFAULT '0',
+  `other_register_names` varchar(255) DEFAULT '',
+  `title` varchar(255) DEFAULT '',
+  `applicant` varchar(255) DEFAULT '',
+  `gender` varchar(255) DEFAULT '',
+  `date_of_birth` date DEFAULT NULL,
+  `street_address` text,
+  `city` varchar(100) DEFAULT '',
+  `province` varchar(100) DEFAULT '',
+  `postalcode` varchar(10) DEFAULT '',
+  `telephone_no` varchar(30) DEFAULT '',
+  `fax_no` varchar(20) DEFAULT '',
+  `email` varchar(50) DEFAULT '',
+  `licence_sought` varchar(255) DEFAULT '',
+  `legal_name` varchar(255) DEFAULT '',
+  `other_corporation_reg_name` varchar(200) DEFAULT '',
+  `list_of_directors_officers` varchar(3) DEFAULT '0',
+  `certificate_incorporation` varchar(3) DEFAULT '0',
+  `other_reg_province_attached` varchar(3) DEFAULT '0',
+  `senior_applicant` varchar(255) DEFAULT '',
+  `surname` varchar(150) DEFAULT '',
+  `given_name` varchar(150) DEFAULT '',
+  `other_title` varchar(100) DEFAULT '',
+  `senior_gender` varchar(255) DEFAULT '',
+  `senior_dob` date DEFAULT NULL,
+  `senior_telephone_no` varchar(30) DEFAULT '',
+  `senior_fax_no` varchar(20) DEFAULT '',
+  `senior_email` varchar(50) DEFAULT '',
+  `senior_address` text,
+  `rpic_applicant` varchar(255) DEFAULT '',
+  `rpic_surname` varchar(150) DEFAULT '',
+  `rpic_givenname` varchar(150) DEFAULT '',
+  `rpic_gender` varchar(255) DEFAULT '',
+  `rpic_dob` date DEFAULT NULL,
+  `rpic_work_hours_days` varchar(200) DEFAULT '',
+  `rpic_other_title` varchar(100) DEFAULT '',
+  `num_arpic_submitting` varchar(255) DEFAULT '',
+  `proposed_arpic` varchar(255) DEFAULT '',
+  `arpic_surname` varchar(100) DEFAULT '',
+  `arpic_givenname` varchar(150) DEFAULT '',
+  `arpic_gender` varchar(255) DEFAULT '',
+  `arpic_work_hours_days` varchar(200) DEFAULT '',
+  `arpic_ranking` varchar(150) DEFAULT '',
+  `arpic_other_title` varchar(200) DEFAULT '',
+  `officers_directors` varchar(3) DEFAULT NULL,
+  `spic` varchar(3) DEFAULT NULL,
+  `rpic` varchar(3) DEFAULT NULL,
+  `arpic` varchar(3) DEFAULT NULL,
+  `possession_purpose` text,
+  `production_purpose` text,
+  `sale_provision_purpose` text,
+  `shipping_purpose` text,
+  `transportation_purpose` text,
+  `delivery_purpose` text,
+  `destruction_purpose` text,
+  `fresh_marihuana_quantity` text,
+  `fresh_marihuana_pro_period` text,
+  `dried_marihuana_quantity` text,
+  `dried_marihuana_pro_period` text,
+  `cannabis_oil_quantity` text,
+  `cannabis_oil_pro_period` text,
+  `cannabis_other` text,
+  `cannabis_other_pro_period` text,
+  `fresh_marihuana_pro_unit` varchar(255) DEFAULT '',
+  `dired_marihuana_pro_unit` varchar(255) DEFAULT '',
+  `cannabis_oil_pro_unit` varchar(255) DEFAULT '',
+  `marihuana_seeds_pro_unit` varchar(255) DEFAULT '',
+  `marihuana_plants_pro_unit` varchar(255) DEFAULT '',
+  `fresh_marihuana_clients_unit` varchar(255) DEFAULT '',
+  `dried_marihuana_clients_unit` varchar(255) DEFAULT '',
+  `cannabis_oil_clients_unit` varchar(255) DEFAULT '',
+  `marihuana_seeds_clients_unit` varchar(255) DEFAULT '',
+  `marihuana_plants_clients_unit` varchar(255) DEFAULT '',
+  `fresh_rc_acmpr_unit` varchar(255) DEFAULT '',
+  `dried_rc_acmpr_unit` varchar(255) DEFAULT '',
+  `cannabis_acmpr_unit` varchar(255) DEFAULT '',
+  `marihuna_seeds_rc_acmpr_unit` varchar(255) DEFAULT '',
+  `marihuna_plants_rc_acmpr` varchar(255) DEFAULT '',
+  `conduct_activities_cannabis` varchar(3) DEFAULT '0',
+  `third_party_laboratory_name` varchar(200) DEFAULT '',
+  `address` text,
+  `drugs_licence_number` varchar(255) DEFAULT '',
+  `attached` varchar(3) DEFAULT '0',
+  `to_follow` varchar(3) DEFAULT '0',
+  `ship_street_address` text,
+  `ship_city` varchar(150) DEFAULT '',
+  `ship_province` varchar(150) DEFAULT '',
+  `ship_postal_code` varchar(20) DEFAULT '',
+  `ship_phone_no` varchar(30) DEFAULT '',
+  `ship_fax_no` varchar(20) DEFAULT '',
+  `ship_email` varchar(50) DEFAULT '',
+  `bill_street_address` text,
+  `bill_city` varchar(150) DEFAULT '',
+  `bill_province` varchar(150) DEFAULT '',
+  `bill_postal_code` varchar(15) DEFAULT '',
+  `appendix_a_attached` varchar(3) DEFAULT '0',
+  `spic_surname` varchar(100) DEFAULT '',
+  `spic_givename` varchar(100) DEFAULT '',
+  `spic_other_title` varchar(100) DEFAULT '',
+  `spic_signature` varchar(150) DEFAULT '',
+  `security_attached` varchar(3) DEFAULT '0',
+  `site_plans_attached` varchar(3) DEFAULT '0',
+  `foot_plans_attached` varchar(3) DEFAULT '0',
+  `storage_areas_attached` varchar(3) DEFAULT '0',
+  `notices_attached` varchar(3) DEFAULT '0',
+  `desc_record_keeping_attached` varchar(3) DEFAULT '0',
+  `example_record_keeping` varchar(3) DEFAULT '0',
+  `police_force_senior_official` varchar(255) DEFAULT '',
+  `police_force_address` text,
+  `police_force_date_apporved` date DEFAULT NULL,
+  `fire_authority_senior_official` varchar(255) DEFAULT '',
+  `fire_authority_address` text,
+  `fire_authority_date_provided` date DEFAULT NULL,
+  `local_gov_senior_official` varchar(255) DEFAULT '',
+  `local_gov_address` text,
+  `local_gov_date_provided` date DEFAULT NULL,
+  `proposed_qap` varchar(255) DEFAULT '',
+  `qap_surname` varchar(200) DEFAULT '',
+  `qap_givenname` varchar(200) DEFAULT '',
+  `qap_gender` varchar(255) DEFAULT '',
+  `qap_dob` date DEFAULT NULL,
+  `qap_worked_hours_days` varchar(250) DEFAULT '',
+  `arpic_dob` date DEFAULT NULL,
+  `individual_applicant` varchar(3) DEFAULT NULL,
+  `police_force_title` varchar(250) DEFAULT '',
+  `fire_authority_title` varchar(250) DEFAULT '',
+  `local_government_title` varchar(250) DEFAULT '',
+  `pac_person1` varchar(255) DEFAULT '',
+  `pac_surname1` varchar(200) DEFAULT '',
+  `pac_givenname1` varchar(200) DEFAULT '',
+  `pac_gender1` varchar(255) DEFAULT '',
+  `pac_person2` varchar(255) DEFAULT '',
+  `pac_surname2` varchar(200) DEFAULT '',
+  `pac_givenname2` varchar(200) DEFAULT '',
+  `pac_gender2` varchar(255) DEFAULT '',
+  `pac_person3` varchar(255) DEFAULT '',
+  `pac_surname3` varchar(200) DEFAULT '',
+  `pac_given_name3` varchar(200) DEFAULT '',
+  `pac_gender3` varchar(255) DEFAULT '',
+  `possession` text,
+  `production` text,
+  `sale_provision` text,
+  `shipping` text,
+  `transportation` text,
+  `delivery` text,
+  `destruction` text,
+  `fresh_marihuna_pro_period` text,
+  `dired_marihuna_pro_period` text,
+  `cannabisoil_pro_period` text,
+  `marihuana_seeds_pro_period` text,
+  `marihuana_plants_production` text,
+  `building_name` varchar(255) DEFAULT '',
+  `possession_cannabis_other` text,
+  `production_cannabis_other` text,
+  `sale_provision_cannabis_other` text,
+  `shipping_cannabis_other` text,
+  `transportation_cannabis_other` text,
+  `delivery_cannabis_other` text,
+  `destruction_cannabis_other` text,
+  `conduct_onsite_lab_activities` text,
+  `up_date_survey` varchar(3) DEFAULT '0',
+  `aerial_view` varchar(3) DEFAULT '0',
+  `mailing_address_same` varchar(3) DEFAULT '0',
+  `police_force_local_authority` varchar(255) DEFAULT '',
+  `fire_local_authority` varchar(255) DEFAULT '',
+  `local_gov_authority` varchar(255) DEFAULT '',
+  `spic_date` date DEFAULT NULL,
+  `document_qa_signed` varchar(3) DEFAULT '0',
+  `sole_owner` varchar(255) DEFAULT '',
+  `sole_owner_date` date DEFAULT NULL,
+  `joint_owner1` varchar(255) DEFAULT '',
+  `joint_owner1_address` text,
+  `joint_owner2` varchar(255) DEFAULT '',
+  `joint_owner2_address` varchar(255) DEFAULT '',
+  `num_persons_cannabis` varchar(255) DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_acmprcf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_acmprcf` (
+  `acmprid` int(11) NOT NULL,
+    PRIMARY KEY (`acmprid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>combo_reasons</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `combo_reasons` (
+  `acmprid` int(11) DEFAULT NULL,
+  `fieldname` varchar(20) DEFAULT NULL,
+  `reason` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;]]></sql>
+		</table>
+		<table>
+			<name>vtigress_acmpr_settings</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtigress_acmpr_settings` (
+  `sequence` int(11) NOT NULL AUTO_INCREMENT,
+  `activities` text,
+  `substance` text,
+  `accountname` text,
+  PRIMARY KEY (`sequence`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;]]></sql>
+		</table>
+		<table>
+			<name>vtigress_acmpr_settings</name>
+			<sql><![CDATA[INSERT INTO `vtigress_acmpr_settings` (`sequence`, `activities`, `substance`, `accountname`) VALUES
+(1, 'Quantitative testing for cannabinoids and terpenes, heavy metal  determination, pathogen content (EG. Mold and bacteria).', 'Fresh marijuana, dried cannabis, cannabis oil.', 'Analytical Laboratories. Lab 1 and Lab 2'),
+(2, 'Propagation will be by the tissue culture method. This room will house the tissue lab,\r\nwhere undifferentiated plant material is grown and then turned into clones.', 'Undifferentiated plant matter and small marihuana clones.', 'Tissue Culture Room'),
+(3, 'Small clones will be grown to a size suitable for transplant into the clone rooms. This room is associated with the tissue culture room.', 'Marihuana clones.', 'Starter Clone Room'),
+(4, 'Clones will be developing healthy root systems.\r\n', 'Rooted marihuana clones.', 'Clone Rooms'),
+(5, 'Rooted clones will be grown under conditions ideal for the development of plant mass. ', 'Plants in a vegetative stage that are being grown to a size that is ideal for transfer into the grow rooms.', 'Vegetative Rooms'),
+(6, 'These are the 32 flowering rooms.', 'Flowering marihuana plants.', 'Grow Rooms'),
+(7, 'Dried marihuana and cannabis oil will be packaged into approved containers.\r\n', 'Dried marihuana and cannabis oil.', 'Packaging Room'),
+(8, 'Secure storage of materials containing cannabinoids.', 'Dried marijuana, cannabis laboratory standards, cannabis oil and such products as are permitted for sale to the medical market.', 'Vault'),
+(9, 'Extraction of dried marihuana by the supercritical CO2 process.\r\n', 'Dried marihuana and cannabis oil.', 'Extraction'),
+(10, 'Drying/curing of fresh marihuana intended for sale as dried marijuana.\r\n', 'Fresh marijuana and dried marihuana.', 'Hang Dry Room'),
+(11, 'This is where hand trimming will be done. Several activities will occur - fresh marihuana will be stripped/groomed prior to hanging in one of the dry rooms, and dried marijuana from the bud dry rooms will be trimmed prior to packaging for sale as the highest quality dried marihuana.', 'Fresh marihuana and dried marihuana.', 'Trim Room'),
+(12, 'Trimming machines will be used on fresh marijuana prior to transfer to one of the bud dry rooms. Trimming machines will also be used on marijuana that has been cured in the hang dry room.', 'Fresh marihuana and dried marihuana', 'Trimming Machine Room'),
+(13, 'Packaged material will be taken from the vault to the outgoing room when an order is received. Packages will be transferred to the shipping department through a secure pass-through window. ', 'Packaged dried marihuana and packaged cannabis oil.', 'Outgoing Room'),
+(14, 'Any substance that contains cannabinoids or any part of the marihuana plant that must be destroyed will be taken to the fermentation/recycle room. There the substances will be ground up and fermented under anaerobic conditions until all cannabinoids are destroyed. ', 'Dried marihuana, marijuana plants, marijuana seeds, cannabis oil, fresh marijuana and expired cannabis standards.', 'Fermentation/Recycle\r\nRoom'),
+(15, 'Products will be shipped and received in the loading bay. ', 'Shipping: Dried marihuana and cannabis oil. Receiving: Marijuana plants (clones), marijuana seeds and cannabis standards', 'Loading Bay');
+
+]]></sql>
+		</table>
+		<table>
+			<name>vtigress_acmpr_griddetails</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtigress_acmpr_griddetails` (
+  `acmprid` int(11) NOT NULL,
+  `activities` text,
+  `substance` text,
+  `accountname` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vtigress_acmpr_activities_settings</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtigress_acmpr_activities_settings` (
+  `id` int(2) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `substances` text,
+  `cannabis` text,
+  `purpose` text,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vtigress_person_griddetails</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtigress_person_griddetails` (
+  `acmprid` int(20) NOT NULL,
+  `contactid` int(20) DEFAULT NULL,
+  `surname` varchar(250) DEFAULT NULL,
+  `givenname` varchar(250) DEFAULT NULL,
+  `gendar` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vtigress_arpic_griddetails</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtigress_arpic_griddetails` (
+  `acmprid` int(20) NOT NULL,
+  `contactid` int(20) DEFAULT NULL,
+  `surname` varchar(250) DEFAULT NULL,
+  `givenname` varchar(250) DEFAULT NULL,
+  `gendar` varchar(20) DEFAULT NULL,
+  `dateofbirth` varchar(30) DEFAULT NULL,
+  `ranking` varchar(250) DEFAULT NULL,
+  `whdays` varchar(200) DEFAULT NULL,
+  `othertitle` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vtigress_measurement</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtigress_measurement` (
+  `fieldname` varchar(100) DEFAULT NULL,
+  `measurement` varchar(200) DEFAULT NULL,
+  UNIQUE KEY `fieldname` (`fieldname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vtigress_measurement</name>
+			<sql><![CDATA[INSERT INTO `vtigress_measurement` (`fieldname`, `measurement`) VALUES
+('fresh_marihuana_pro_unit', 'Kg'),
+('dired_marihuana_pro_unit', 'Kg'),
+('cannabis_oil_pro_unit', 'Kg'),
+('marihuana_seeds_pro_unit', 'Units'),
+('marihuana_plants_pro_unit', 'Kg'),
+('fresh_marihuana_clients_unit', 'Kg'),
+('dried_marihuana_clients_unit', 'Kg'),
+('cannabis_oil_clients_unit', 'Kg'),
+('marihuana_seeds_clients_unit', 'Units'),
+('marihuana_plants_clients_unit', 'Kg'),
+('fresh_rc_acmpr_unit', 'Kg'),
+('dried_rc_acmpr_unit', 'Kg'),
+('cannabis_acmpr_unit', 'Kg'),
+('marihuna_seeds_rc_acmpr_unit', 'Units'),
+('marihuna_plants_rc_acmpr', 'Kg');]]></sql>
+		</table>
+	</tables>
+</schema>

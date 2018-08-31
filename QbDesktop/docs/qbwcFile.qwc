@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<QBWCXML>
+	<AppName>Vtiger CRM QuickBooks Integration</AppName>
+	<AppID></AppID>
+	<AppURL>http://localhost/Quickbooks/QuickBooks/SOAP/Server.php</AppURL>
+	<AppDescription>Vtiger QuickBooks SOAP Server that transfers data between Vtiger and Quickbooks</AppDescription>
+	<AppSupport>http://localhost/Quickbooks/index.php</AppSupport>
+	<UserName>anjaneyach@vtigress.com</UserName>
+	<OwnerID>{57F3B9B6-86F1-4FCC-B1FF-966DE1813D20}</OwnerID>
+	<FileID>{57F3B9B6-86F1-4FCC-B1FF-166DE1813D20}</FileID>
+	<QBType>QBFS</QBType>
+	<Notify>false</Notify>
+	<IsReadOnly>false</IsReadOnly>
+</QBWCXML>

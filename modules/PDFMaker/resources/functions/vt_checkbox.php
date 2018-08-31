@@ -1,0 +1,25 @@
+<?php
+
+/* A function to take a date in ($date) in specified date() format (eg mm/dd/yy for 12/08/10) and 
+ * return date in $outFormat (eg d.m.Y for 20.10.1208; )
+ *  datum $date - Datum containing the literal date that will be modified
+ *  string $outFormat - String containing the desired date output, format the same as date()
+ * 
+ * [CUSTOMFUNCTION|datefmt|$INVOICE_DUEDATE$|d.m.Y|CUSTOMFUNCTION] 
+ */
+
+if (!function_exists('vtheckbox')) {
+
+    function vtheckbox($radioval='') {
+		if($radioval == 'Yes'){
+			return  "<img src='test/user/checked_checkbox.png' width='12px' height='12px' align='middle'/>";
+		}elseif($radioval == 'No'){
+			return "<img src='test/user/unchecked_checkbox.png' width='12px' height='12px' align='middle'/>";
+		}else{
+			return $radioval." <img src='test/user/unchecked_checkbox.png' width='12px' height='12px' align='middle'/>";
+		}
+		
+       
+    }
+
+}

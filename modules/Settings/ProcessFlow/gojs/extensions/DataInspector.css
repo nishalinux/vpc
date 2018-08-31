@@ -1,0 +1,61 @@
+/*
+Default CSS for the Data inspector
+see also: dataInspector.js, dataInspector.html
+*/
+
+/*
+  Grey color palette
+  https://www.google.com/design/spec/style/color.html
+/*   #FAFAFA; /* Grey 50  */
+/*   #F5F5F5; /* Grey 100 */
+/*   #EEEEEE; /* Grey 200 */
+/*   #E0E0E0; /* Grey 300 */
+/*   #BDBDBD; /* Grey 400 */
+/*   #9E9E9E; /* Grey 500 */
+/*   #757575; /* Grey 600 */
+/*   #616161; /* Grey 700 */
+/*   #424242; /* Grey 800 */
+/*   #212121; /* Grey 900 */
+
+.inspector {
+  display: inline-block;
+  font: bold 14px helvetica, sans-serif;
+  
+  color: rgb(75, 70, 70); /* Grey 100 */
+  cursor: default;
+  width:100%;
+}
+
+.inspector table {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.inspector td, th {
+  padding: 2px;
+}
+
+.inspector > .table>tbody>tr>td:first-child{
+  width: 25%;
+}
+.inspector > .table>tbody>tr>td {
+  text-align: right;
+}
+
+.inspector input {
+ 
+  font: bold 12px helvetica, sans-serif;
+   
+  padding: 2px;
+  border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.inspector input:disabled {
+  background-color: #BDBDBD; /* Grey 400 */
+  color: #616161; /* Grey 700 */
+}
+ 
+ 
+

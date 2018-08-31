@@ -1,0 +1,6 @@
+<?php
+	$desc = 'Line one
+line two';
+
+echo nl2br($desc);
+?>

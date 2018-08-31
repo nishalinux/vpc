@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_users</name>
+			<sql><![CDATA[ALTER TABLE vtiger_users ADD login_starts_at VARCHAR( 30 ) NULL AFTER is_owner ,
+                                ADD login_ends_at VARCHAR( 30 ) NULL AFTER login_starts_at ,
+                                ADD allowed_ips VARCHAR( 255 ) NULL AFTER login_ends_at ,
+                                ADD login_dow VARCHAR( 255 ) NULL AFTER allowed_ips ,
+                                ADD login_allow_holiday VARCHAR( 50 ) NULL AFTER login_dow]]></sql>
+		</table>
+		<table>
+			<name>vtiger_field</name>
+			<sql><![CDATA[ UPDATE vtiger_field SET block='0' AND typeofdata='P~O' WHERE (columnname='user_password' and fieldname='user_password') or (columnname='confirm_password' and fieldname='confirm_password') ]]></sql>
+		</table>
+	</tables>
+</schema>

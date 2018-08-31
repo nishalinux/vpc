@@ -1,0 +1,62 @@
+/*
+left controls the position
+*/
+.btn-group ul.dropdown-menu li:HOVER ul.dropdown-menu {
+  display:block; 
+  position:absolute; 
+  left:-75%;
+  width:50%;
+  margin-top:-10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn-group ul.dropdown-menu li ul.dropdown-menu {
+  display: none;
+  float:right;
+  position: relative;
+  top: auto;
+  margin-top: -30px;
+}
+
+.btn-group ul.dropdown-menu ul.dropdown-menu li:HOVER ul.dropdown-menu {
+  display:block; 
+  position:absolute; 
+  left:-75%;
+  width:50%;
+  margin-top:-10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn-group ul.dropdown-menu ul.dropdown-menu li ul.dropdown-menu {
+  display: none;
+  float:right;
+  position: relative;
+  top: auto;
+  margin-top: -30px;
+}
+
+/*
+.btn-group ul.dropdown-menu ul.dropdown-menu ul.dropdown-menu li:HOVER ul.dropdown-menu {
+  display:block; 
+  position:absolute; 
+  left:-75%;
+  width:50%;
+  margin-top:-10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn-group ul.dropdown-menu ul.dropdown-menu ul.dropdown-menu li ul.dropdown-menu {
+  display: none;
+  float:right;
+  position: relative;
+  top: auto;
+  margin-top: -30px;
+}
+
+*/

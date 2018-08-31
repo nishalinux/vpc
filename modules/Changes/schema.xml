@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_change</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_change` (
+  `changeid` int(11) NOT NULL,
+  `change_no` varchar(100) NOT NULL,
+  `changename` varchar(50) NOT NULL,
+  `changecategory` varchar(200) DEFAULT NULL,
+  `qty_per_unit` decimal(11,2) DEFAULT '0.00',
+  `unit_price` decimal(25,2) DEFAULT NULL,
+  `sales_start_date` date DEFAULT NULL,
+  `sales_end_date` date DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `expiry_date` date DEFAULT NULL,
+  `discontinued` int(1) NOT NULL DEFAULT '0',
+  `change_usageunit` varchar(200) DEFAULT NULL,
+  `website` varchar(100) DEFAULT NULL,
+  `taxclass` varchar(200) DEFAULT NULL,
+  `currency_id` int(19) NOT NULL DEFAULT '1',
+  `commissionrate` decimal(7,3) DEFAULT NULL,
+  PRIMARY KEY (`changeid`),
+  CONSTRAINT `fk_1_vtiger_change` FOREIGN KEY (`changeid`) REFERENCES `vtiger_crmentity` (`crmid`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_changecf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_changecf` (
+  `changeid` int(19) NOT NULL DEFAULT '0',
+  `c_old_task_ref` varchar(100) DEFAULT '',
+  `c_new_task_ref` varchar(100) DEFAULT '',
+  `c_start_date` date DEFAULT NULL,
+  `c_end_date` date DEFAULT NULL,
+  `c_task_budget` decimal(56,8) DEFAULT NULL,
+  `c_hourly_charges` decimal(56,8) DEFAULT NULL,
+  `c_task_budget_hours` varchar(100) DEFAULT '',
+  `c_co_mode` varchar(100) DEFAULT '',
+  PRIMARY KEY (`changeid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

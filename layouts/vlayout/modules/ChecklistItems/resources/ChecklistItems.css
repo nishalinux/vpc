@@ -1,0 +1,7 @@
+li.checklist-name{
+    cursor: pointer;
+}
+#vte-checklist-details{
+    width: 800px;
+    height: 600px;
+}

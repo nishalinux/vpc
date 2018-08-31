@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_rooms</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_rooms` (
+  `roomsid` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `room_type` varchar(100) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `parent_name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_roomscf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_roomscf` (
+  `roomsid` int(11) NOT NULL,
+  PRIMARY KEY (`roomsid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_rooms_related_modules</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_rooms_related_modules` (
+  `module_name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_rooms_user_field</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_rooms_user_field` (
+  `recordid` int(25) NOT NULL,
+  `userid` int(25) NOT NULL,
+  `starred` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+		</table>
+		<table>
+			<name>vte_modules</name>
+			<sql><![CDATA[CREATE TABLE `vte_modules` (
+                `module`  varchar(50) NOT NULL ,
+                `valid`  int(1) NULL ,
+                PRIMARY KEY (`module`));]]></sql>
+		</table>
+	</tables>
+</schema>

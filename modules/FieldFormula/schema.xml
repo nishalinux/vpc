@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>field_formula</name>
+			<sql><![CDATA[CREATE TABLE `field_formula` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `module` varchar(50) DEFAULT NULL,
+  `name` varchar(250) DEFAULT NULL,
+  `active` int(1) DEFAULT NULL,
+  `formula_field` varchar(50) DEFAULT NULL,
+  `formula` varchar(5000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>
